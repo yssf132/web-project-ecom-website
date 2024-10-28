@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue - E-commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Catalogue des Produits</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="catalogue.html">Catalogue</a>
+      <a href="panier.html">Panier</a>
+      <a href="paiement.html">Paiement</a>
+    </nav>
+  </header>
+
+  <section class="section catalogue">
+    <h2>Produits</h2>
+    <div class="product-filters">
+      <label for="price">Filtrer par prix :</label>
+      <select id="price">
+        <option value="low-high">Bas - Élevé</option>
+        <option value="high-low">Élevé - Bas</option>
+      </select>
+      <label for="popularity">Filtrer par popularité :</label>
+      <select id="popularity">
+        <option value="popular">Populaire</option>
+        <option value="new">Nouveautés</option>
+      </select>
+    </div>
+    <div class="products">
+      <div class="product">
+        <img src="Setup-Game-SG-STRONG-R7-5700X-RTX-4060Ti-Maroc.jpg" alt="Product Image">
+        <p>Produit 1 - 50€</p>
+        <a href="produit.html">Voir Produit</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
