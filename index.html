@@ -5,16 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ecom website</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
   <header>
     <nav>
       <div style="display: flex; justify-content: space-between; width: 100%;">
-        <div>
+        <div class="left-menu">
           <img src="logo.png" alt="Logo" style="height: 50px; margin-right: 10px;">
           <a href="index.html">SPARK ELECTRONIC</a>
         </div>
-        <div>
+        <div class="right-menu">
           <a href="panier.html">Panier</a>
           <a href="paiement.html">Paiement</a>
         </div>
@@ -22,16 +29,202 @@
     </nav>
   </header>
 
-  <section class="section accueil">
-    <h2>Catégories Principales</h2>
-    <div class="categories">
-      <div class="category"><a href="catalogue.html">PC Gamer</a></div>
-      <div class="category"><a href="laptop.html">Laptop</a></div>
-      <div class="category"><a href="peripherique.html">Périphérique</a></div>
+
+  <div class="main-page">
+
+    <aside class="aside accueil">
+
+      <h2>Catégories Principales</h2>
+
+
+      <div class="categories">
+        <div class="categories-item">
+          <a href="catalogue.html">PC Gamer</a>
+            <img src="acceuilpic/3038527_1.jpg">
+        </div>
+
+        <div class="categories-item">
+          <a href="laptop.html">laptop</a>
+          <img src="acceuilpic/laptop.webp">
+        </div>
+
+        <div class="categories-item">
+          <a href="peripherique.html">Périphérique</a>
+          <img src="acceuilpic/gpu.jpg">
+        </div>
+
+      </div>
+    </aside>
+
+
+
+    <section class="container">
+      <h2 class="promotitle">Nos promotions!!</h2>
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img id="slide-1" src="promos/279c38e28ecbd6d0e81323c098b31d1b54c67346_GA241%20Site%20(1).jpg" alt="3D rendering of an imaginary orange planet in space" />
+          <img id="slide-2" src="promos/PROMOTION.webp" alt="3D rendering of an imaginary green planet in space" />
+          <img id="slide-3" src="promos/White-Blue-Esport-Gamer-Offline-Twitch-Banner-772-x-532-px-1.webp" alt="3D rendering of an imaginary blue planet in space" />
+        </div>
+        <div class="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+        </div>
+      </div>
+    </section>
+
+    <div class="marques">
+      <h2>Marques</h2>
+      <div class="marque-item">
+        <img src="marques/AMD-Emblem.jpg">
+      </div>
+
+      <div class="marque-item">
+        <img src="marques/Intel_logo_(2006-2020).svg.png">
+      </div>
+
+      <div class="marque-item">
+        <img src="marques/Nvidia_(logo).svg.png">
+      </div>
+
+      <div class="marque-item">
+        <img src="marques/79183.jpg" >
+      </div>
+      <div class="marque-item">
+        <img src="marques/msi.png" >
+      </div>
     </div>
-    <div class="banner">
-      <p>Profitez de nos offres exclusives sur des produits en promotion !</p>
+
+
+
+    <div class="meilleursventes">
+      <div class="meilleursvente-item">
+        <img src="populaire-ventes/msi-g27c4x-27-curved-gaming-.jpg" alt="">
+        <p class="item">Msi G27C4X 27" Curved Gaming 250Hz Freesync</p>
+        <p class="price">2249DH</p>
+        <button class="purchase">Ajouter au panier</button>
+      </div>
+      <div class="meilleursvente-item">
+        <img src="populaire-ventes/aoc-24g4e-24-fhd-ips-180hz-05ms.jpg" alt="">
+        <p class="item">AOC 24G4E 24" FHD IPS 180Hz 0.5ms</p>
+        <p class="price">1390DH</p>
+        <button class="purchase">Ajouter au panier</button>
+      </div>
+      <div class="meilleursvente-item">
+        <img src="populaire-ventes/aerocool-bronze-750w-230v-apfc-eu-box.jpg" alt="">
+        <p class="item">AeroCool Aero Bronze 750W 80+ Bronze</p>
+        <p class="price">990DH</p>
+        <button class="purchase">Ajouter au panier</button>
+      </div>
+      <div class="meilleursvente-item">
+        <img src="populaire-ventes/msi-a520m-a-pro.jpg" alt="">
+        <p class="item ">MSI A520M-A PRO</p>
+        <p class="price fix">1200DH</p>
+        <button class="purchase">Ajouter au panier</button>
+      </div>
     </div>
-  </section>
+
+
+  </div>
+
+
+  <div class="Services">
+    <div class="Services-item">
+      <span class="material-symbols-outlined">
+      local_shipping
+      </span>
+      <h3>Livraison Gratuite</h3>
+      <p>à partir de 500 DH TTC</p> 
+    </div>
+    <div class="Services-item">
+      <span class="material-symbols-outlined">
+      cached
+      </span>
+      <h3>14 JOURS</h3>
+      <p>droit de retour</p>
+    </div>
+    <div class="Services-item">
+      <span class="material-symbols-outlined">
+      contact_support
+      </span>
+      <h3>SUPPORT 24/7</h3>
+      <p>service apres vente gratuit</p>
+    </div>
+    <div class="Services-item">
+      <span class="material-symbols-outlined">
+      security
+      </span>
+      <h3>PAIEMENT SECURISE</h3>
+      <p>paiement a la reception</p>
+    </div>
+
+
+
+
+
+
+  </div>
+
+  <footer style="background-color: #2e3030; padding: 20px; border-top: 1px solid #ddd;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto;">
+      <!-- About the Company -->
+      <div style="flex: 1; min-width: 200px; margin: 10px;">
+        <h3>About Us</h3>
+        <p>
+          We are a leading e-commerce platform offering the best deals on top-quality products. Shop with confidence and convenience.
+        </p>
+        <a href="/about-us" style="color: #007bff; text-decoration: none;">Learn More</a>
+      </div>
+
+      <!-- Customer Service -->
+      <div style="flex: 1; min-width: 200px; margin: 10px;">
+        <h3>Customer Service</h3>
+        <ul style="list-style-type: none; padding: 0;">
+          <li><a href="/help-center" style="color: #007bff; text-decoration: none;">Help Center</a></li>
+          <li><a href="/returns" style="color: #007bff; text-decoration: none;">Returns & Refunds</a></li>
+          <li><a href="/shipping-info" style="color: #007bff; text-decoration: none;">Shipping Info</a></li>
+          <li><a href="/contact-us" style="color: #007bff; text-decoration: none;">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Links -->
+      <div style="flex: 1; min-width: 200px; margin: 10px;">
+        <h3>Follow Us</h3>
+        <div style="display: flex; gap: 10px;">
+          <a href="https://facebook.com" target="_blank" style="color: #3b5998; text-decoration: none;">Facebook</a>
+          <a href="https://twitter.com" target="_blank" style="color: #1da1f2; text-decoration: none;">Twitter</a>
+          <a href="https://instagram.com" target="_blank" style="color: #c32aa3; text-decoration: none;">Instagram</a>
+          <a href="https://linkedin.com" target="_blank" style="color: #0077b5; text-decoration: none;">LinkedIn</a>
+        </div>
+      </div>
+
+      <!-- Newsletter Subscription -->
+      <div style="flex: 1; min-width: 200px; margin: 10px;">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form action="/subscribe" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
+          <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                  style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
+          >
+          <button
+                  type="submit"
+                  style="padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px; font-size: 14px; color: #777;">
+      © 2024 Your E-Commerce Company. All Rights Reserved.
+    </div>
+  </footer>
+
+
+
 </body>
 </html>
