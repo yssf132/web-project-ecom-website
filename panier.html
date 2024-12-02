@@ -26,5 +26,53 @@
       <a href="paiement.html" class="checkout">Passer à la commande</a>
     </div>
   </section>
+
+  <script>
+    // Charger les articles du panier depuis localStorage
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartContainer = document.querySelector(".cart");
+
+    // Afficher les produits dans le panier
+    function renderCart() {
+      cartContainer.innerHTML = ""; // Réinitialise le contenu du panier
+
+      if (cart.length === 0) {
+        cartContainer.innerHTML = "<p>Votre panier est vide.</p>";
+        return;
+      }
+
+      cart.forEach((product, index) => {
+        const cartItem = document.createElement("div");
+        cartItem.classList.add("cart-item");
+        cartItem.innerHTML = `
+        <p>${product.name} - ${product.price}</p>
+        <button data-index="${index}">Supprimer</button>
+      `;
+        cartContainer.appendChild(cartItem);
+      });
+
+      // Boutons de suppression
+      document.querySelectorAll(".cart-item button").forEach((button) => {
+        button.addEventListener("click", (e) => {
+          const index = e.target.dataset.index;
+          cart.splice(index, 1); // Supprimer l'article du tableau
+          localStorage.setItem("cart", JSON.stringify(cart)); // Mettre à jour localStorage
+          renderCart(); // Re-render le panier
+        });
+      });
+
+      // Ajouter le bouton "Passer à la commande"
+      const checkoutButton = document.createElement("a");
+      checkoutButton.href = "paiement.html";
+      checkoutButton.classList.add("checkout");
+      checkoutButton.innerText = "Passer à la commande";
+      cartContainer.appendChild(checkoutButton);
+    }
+
+    renderCart(); // Initialiser le panier à l'ouverture
+  </script>
+
+
+
 </body>
 </html>

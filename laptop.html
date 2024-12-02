@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catalogue - E-commerce</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="produit.css">
 </head>
 <body>
   <header>
@@ -27,22 +27,46 @@
       <div class="product" style="text-align: left; flex: 1 1 calc(33.333% - 20px); box-sizing: border-box;">
         <img src="laptop\laptop1.jpg" alt="Product Image" style="width: 100px; height: auto;">
         <p>Produit 1 - 50€</p>
-        <a href="produit1.html">Voir Produit</a>
+        <button>Add product</button>
       </div>
   
       <div class="product" style="text-align: left; flex: 1 1 calc(33.333% - 20px); box-sizing: border-box;">
         <img src="laptop\laptop2.jpg" alt="Product Image" style="width: 100px; height: auto;">
         <p>Produit 2 - 75€</p>
-        <a href="produit2.html">Voir Produit</a>
+        <button>Add product</button>
       </div>
   
       <div class="product" style="text-align: left; flex: 1 1 calc(33.333% - 20px); box-sizing: border-box;">
         <img src="laptop\laptop3.jpg" alt="Product Image" style="width: 100px; height: auto;">
         <p>Produit 3 - 100€</p>
-        <a href="produit3.html">Voir Produit</a>
+        <button>Add product</button>
       </div>
     </div>
   </section>
   </section>
+
+  <script>
+    // Initialisation du panier
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Fonction pour ajouter un produit au panier
+    function addToCart(productName, productPrice) {
+      const product = { name: productName, price: productPrice };
+      cart.push(product); // Ajouter le produit au panier
+      localStorage.setItem("cart", JSON.stringify(cart)); // Sauvegarder dans localStorage
+      alert(`${productName} a été ajouté au panier !`);
+    }
+
+    // Ajout des événements sur les boutons
+    document.querySelectorAll(".product").forEach((productElement, index) => {
+      const button = productElement.querySelector("button");
+      const productName = productElement.querySelector("p").innerText.split(" - ")[0];
+      const productPrice = productElement.querySelector("p").innerText.split(" - ")[1];
+
+      button.addEventListener("click", () => {
+        addToCart(productName, productPrice);
+      });
+    });
+  </script>
 </body>
 </html>
