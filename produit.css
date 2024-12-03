@@ -14,41 +14,36 @@ body {
 
 /* Header and Navigation */
 header {
-    background-color: #222;
+    background-color: #343131;
     color: #fff;
     padding: 10px 20px;
 }
 
+header h1 {
+    margin: 0;
+}
+
 nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
-nav .left-menu img {
-    height: 40px;
-    margin-right: 10px;
-}
-
-nav .left-menu a {
+nav a {
     color: #fff;
-    font-size: 24px;
     text-decoration: none;
+    margin: 0 10px;
     font-weight: bold;
-}
-
-nav .right-menu a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 16px;
 }
 
 nav a:hover {
     text-decoration: underline;
-  }
-nav .right-menu a:hover {
-    text-decoration: underline;
+}
+
+.left-menu, .right-menu {
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Section Catalogue */
