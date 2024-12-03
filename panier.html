@@ -39,7 +39,7 @@
     function displayTotal() {
       const totalContainer = document.createElement("div");
       totalContainer.classList.add("total");
-      totalContainer.innerHTML = `<p>Total: ${calculateTotal()}€</p>`;
+      totalContainer.innerHTML = `<p>Total: ${calculateTotal()} DH</p>`;
       return totalContainer;
     }
 
@@ -50,7 +50,7 @@
         const cartItem = document.createElement("div");
         cartItem.classList.add("cart-item");
         cartItem.innerHTML = `
-          <p>${product.name} - ${product.price}€</p>
+          <p>${product.name} - ${product.price}</p>
           <button data-index="${index}">Supprimer</button>
         `;
         cartContainer.appendChild(cartItem);
