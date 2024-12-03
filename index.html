@@ -103,31 +103,53 @@
     <div class="meilleursventes">
       <div class="meilleursvente-item">
         <img src="populaire-ventes/msi-g27c4x-27-curved-gaming-.jpg" alt="">
-        <p class="item">Msi G27C4X 27" Curved Gaming 250Hz Freesync</p>
-        <p class="price">2249DH</p>
+        <p class="item" style="color: #cc0f0f;">Msi G27C4X 27" Curved Gaming - 2800 DH</p>
+
         <button class="purchase">Ajouter au panier</button>
       </div>
       <div class="meilleursvente-item">
         <img src="populaire-ventes/aoc-24g4e-24-fhd-ips-180hz-05ms.jpg" alt="">
-        <p class="item">AOC 24G4E 24" FHD IPS 180Hz 0.5ms</p>
-        <p class="price">1390DH</p>
+        <p class="item" style="color: #cc0f0f;">AOC 24G4E 24" FHD IPS 180Hz 0.5ms - 1500 DH</p>
+
         <button class="purchase">Ajouter au panier</button>
       </div>
       <div class="meilleursvente-item">
         <img src="populaire-ventes/aerocool-bronze-750w-230v-apfc-eu-box.jpg" alt="">
-        <p class="item">AeroCool Aero Bronze 750W 80+ Bronze</p>
-        <p class="price">990DH</p>
+        <p class="item" style="color: #cc0f0f;">AeroCool Aero Bronze 750W 80+ Bronze - 2100 DH</p>
+
         <button class="purchase">Ajouter au panier</button>
       </div>
       <div class="meilleursvente-item">
         <img src="populaire-ventes/msi-a520m-a-pro.jpg" alt="">
-        <p class="item ">MSI A520M-A PRO</p>
-        <p class="price fix">1200DH</p>
+        <p class="item " style="color: #cc0f0f;">MSI A520M A PRO - 700 DH</p>
+
         <button class="purchase">Ajouter au panier</button>
       </div>
     </div>
 
-
+    <script>
+      // Initialisation du panier
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+      // Fonction pour ajouter un produit au panier
+      function addToCart(productName, productPrice) {
+        const product = { name: productName, price: productPrice };
+        cart.push(product); // Ajouter le produit au panier
+        localStorage.setItem("cart", JSON.stringify(cart)); // Sauvegarder dans localStorage
+        alert(`${productName} a été ajouté au panier !`);
+      }
+  
+      // Ajout des événements sur les boutons
+      document.querySelectorAll(".meilleursvente-item").forEach((productElement, index) => {
+        const button = productElement.querySelector("button");
+        const productName = productElement.querySelector("p").innerText.split(" - ")[0];
+        const productPrice = productElement.querySelector("p").innerText.split(" - ")[1];
+  
+        button.addEventListener("click", () => {
+          addToCart(productName, productPrice);
+        });
+      });
+    </script>
   </div>
 
 

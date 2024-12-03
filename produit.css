@@ -44,6 +44,9 @@ nav .right-menu a {
     font-size: 16px;
 }
 
+nav a:hover {
+    text-decoration: underline;
+  }
 nav .right-menu a:hover {
     text-decoration: underline;
 }
@@ -95,7 +98,7 @@ nav .right-menu a:hover {
 .catalogue .product button {
     text-decoration: none;
     color: #fff;
-    background-color: #007BFF;
+    background-color: #3f3f3d;
     padding: 10px 15px;
     font-size: 16px;
     border: none;
